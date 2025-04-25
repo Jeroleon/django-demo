@@ -5,8 +5,8 @@ def home(request):
     return render(request, 'main/home.html')
 
 def add(request):
-    name = request.GET.get('name')
-    email = request.GET.get('email')
-    phone = request.GET.get('phone')
-    address = request.GET.get('address')
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    phone = request.POST['phone']
+    address = request.POST.get('address')
     return render(request, 'main/result.html', {'name': name, 'email': email, 'phone': phone, 'address': address})

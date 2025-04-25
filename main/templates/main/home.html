@@ -55,7 +55,8 @@
 <body>
   <div class="form-container">
     <h2>User Information</h2>
-    <form action="add">
+    <form action="add" method="POST">
+        {% csrf_token %}
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="John Doe" required>
